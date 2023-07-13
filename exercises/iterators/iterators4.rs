@@ -15,6 +15,10 @@ pub fn factorial(num: u64) -> u64 {
     // Execute `rustlings hint iterators4` for hints.
 }
 
+pub fn factorial(num: u64) -> u64 {
+    (1..=num).product()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -28,6 +32,7 @@ mod tests {
     fn factorial_of_1() {
         assert_eq!(1, factorial(1));
     }
+    
     #[test]
     fn factorial_of_2() {
         assert_eq!(2, factorial(2));
@@ -38,3 +43,4 @@ mod tests {
         assert_eq!(24, factorial(4));
     }
 }
+
